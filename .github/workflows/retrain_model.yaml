@@ -25,6 +25,7 @@ jobs:
       - name: Run Model Training
         env:
           MLFLOW_TRACKING_URI: "sqlite:///mlruns.db" # Standard localized tracking for demonstration without external server
+          REFERENCE_DATA_PATH: "data/reference_data_sample.csv"
         run: |
           export PYTHONPATH=$PYTHONPATH:$(pwd)/training
           python training/train.py

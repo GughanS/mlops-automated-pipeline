@@ -16,8 +16,8 @@ def detect_drift():
         sys.exit(1)
         
     if not os.path.exists(CURRENT_DATA_PATH):
-        print(f"Current data not found at {CURRENT_DATA_PATH}")
-        sys.exit(1)
+        print(f"Current data not found at {CURRENT_DATA_PATH}. No new transactions to evaluate.")
+        sys.exit(0)
 
     reference_data = pd.read_csv(REFERENCE_DATA_PATH)
     current_data = pd.read_csv(CURRENT_DATA_PATH)
