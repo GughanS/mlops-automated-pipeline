@@ -27,5 +27,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_DISPATCH_URL: "https://api.github.com/repos/${{ github.repository }}/dispatches"
         run: |
+          pip list
           export PYTHONPATH=$PYTHONPATH:$(pwd)
           python monitoring/drift_detector.py
