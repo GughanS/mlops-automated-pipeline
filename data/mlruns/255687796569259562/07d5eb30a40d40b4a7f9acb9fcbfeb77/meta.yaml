@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/mlops-automated-pipeline/data/mlruns/255687796569259562/07d5eb30a40d40b4a7f9acb9fcbfeb77/artifacts
+end_time: 1772040149708
+entry_point_name: ''
+experiment_id: '255687796569259562'
+lifecycle_stage: active
+run_id: 07d5eb30a40d40b4a7f9acb9fcbfeb77
+run_name: serious-tern-270
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1772039939257
+status: 3
+tags: []
+user_id: admin

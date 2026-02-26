@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/mlops-automated-pipeline/data/mlruns/255687796569259562/46405a88cdd240489656b4436b540b0d/artifacts
+end_time: 1771999694339
+entry_point_name: ''
+experiment_id: '255687796569259562'
+lifecycle_stage: active
+run_id: 46405a88cdd240489656b4436b540b0d
+run_name: sneaky-bug-551
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1771999685303
+status: 3
+tags: []
+user_id: admin

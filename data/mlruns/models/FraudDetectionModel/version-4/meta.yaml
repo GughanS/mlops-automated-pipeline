@@ -1,0 +1,16 @@
+creation_timestamp: 1772075529501
+current_stage: Production
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1772075570911
+model_id: m-1d57586abe7242ceb659f77b50974d43
+name: FraudDetectionModel
+run_id: e29329f15a28458db68bd56f765e7aa3
+run_link: null
+source: models:/m-1d57586abe7242ceb659f77b50974d43
+status: READY
+status_message: null
+storage_location: file:///D:/mlops-automated-pipeline/data/mlruns/255687796569259562/models/m-1d57586abe7242ceb659f77b50974d43/artifacts
+user_id: null
+version: 4
+workspace: default

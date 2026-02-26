@@ -1,0 +1,31 @@
+name: Drift Monitor
+
+on:
+  schedule:
+    # Run every 12 hours
+    - cron: '0 */12 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Drift Detection
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_DISPATCH_URL: "https://api.github.com/repos/${{ github.repository }}/dispatches"
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+          python monitoring/drift_detector.py

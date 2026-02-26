@@ -1,0 +1,30 @@
+name: Retrain Model
+
+on:
+  repository_dispatch:
+    types: [trigger-retrain]
+  workflow_dispatch:
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r training/requirements.txt
+
+      - name: Run Model Training
+        env:
+          MLFLOW_TRACKING_URI: "sqlite:///mlruns.db" # Standard localized tracking for demonstration without external server
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/training
+          python training/train.py
