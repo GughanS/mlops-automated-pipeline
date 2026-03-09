@@ -41,8 +41,8 @@ def detect_drift():
     if dataset_drift:
         print("Data drift detected. Triggering retraining workflow.")
         trigger_retraining()
-        # Exit with a special code to let GH Actions know drift occurred
-        sys.exit(1)
+        # Retraining has been triggered, so exit successfully
+        sys.exit(0)
     else:
         print("No significant data drift detected.")
 
